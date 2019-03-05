@@ -13,6 +13,10 @@ https://spring.io/tools
 3.Maven環境変数設定
 >export M2_HOME=/yourfilelocation/apache-maven-3.6.0 <br>
 export PATH=$PATH:$M2_HOME/bin 
+### DB環境配置
+1.ダンロード　[mysql-8.0.15-macos10.14-x86_64.dmg](https://dev.mysql.com/downloads/mysql/)<br>
+2.MySQL環境配置
+>export PATH=$PATH:/usr/local/mysql/bin
 ### Import Existing Maven Project
 ### Run As Spring Boot App
 ## 定義書のswaggerでの見方
