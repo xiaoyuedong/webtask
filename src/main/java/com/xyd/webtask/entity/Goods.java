@@ -1,20 +1,27 @@
 package com.xyd.webtask.entity;
 
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+@GenericGenerator(name = "jpa-uuid", strategy = "uuid")
+@Entity
 public class Goods {
 	
+	@Id
+	@NotNull
+    @GeneratedValue
 	private long id;
 	private String img;
+	@Size(max=100)
     private String title;
+	@Size(max=500)
     private String description;
     private Double price;
- 
-    public Goods(long id, String img, String title, String description, Double price) {
-    	this.id = id;
-    	this.img = img;
-        this.title = title;
-        this.description = description;
-        this.price = price;
-    }
 
 	public long getId() {
 		return id;
