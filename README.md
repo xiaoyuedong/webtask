@@ -2,7 +2,7 @@
 ## MACOS環境
 ### Spring Tool Suite 4 ダンロード
 https://spring.io/tools
-### Java環境設定
+### Java環境
 1.ダンロード　[Java SE Development Kit 11.0.2](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html)<br>
 2.JAVA環境変数設定
 > export JAVA_HOME=$(/usr/libexec/java_home -v 11)<br>
@@ -13,9 +13,9 @@ https://spring.io/tools
 3.Maven環境変数設定
 >export M2_HOME=/yourfilelocation/apache-maven-3.6.0 <br>
 export PATH=$PATH:$M2_HOME/bin 
-### DB環境配置
+### DB環境
 1.ダンロード　[mysql-8.0.15-macos10.14-x86_64.dmg](https://dev.mysql.com/downloads/mysql/)<br>
-2.MySQL環境配置
+2.MySQL環境変数設定
 >export PATH=$PATH:/usr/local/mysql/bin
 ### Import Existing Maven Project
 ### Run As Spring Boot App
