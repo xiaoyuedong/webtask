@@ -30,22 +30,22 @@ public class GoodsService
 
     public Object getGoods(Long id) throws NotFoundException
     {
-        Goods currentInstance = goodsRepository.findById(id).get();
+        Goods currentInstance = goodsRepository.findOne(id);
         if (currentInstance == null)
         {
             throw new NotFoundException("goods " + id + " is not exist!", Result.ErrorCode.GOODS_NOT_FOUND.getCode());
         }
-        return goodsRepository.findById(id).get();
+        return goodsRepository.findOne(id);
     }
 
     public void deleteGoods(Long id)
     {
-        goodsRepository.deleteById(id);
+        goodsRepository.delete(id);
     }
 
     public Goods update(Long id, Goods goods)
     {
-        Goods currentInstance = goodsRepository.findById(id).get();
+        Goods currentInstance = goodsRepository.findOne(id);
 
         String[] nullPropertyNames = getNullPropertyNames(goods);
         BeanUtils.copyProperties(goods, currentInstance, nullPropertyNames);
